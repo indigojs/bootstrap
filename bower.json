@@ -1,0 +1,22 @@
+{
+  "name": "indigo-bootstrap",
+  "version": "3.1.1",
+  "main": [
+    "./dist/css/indigo-bootstrap.css",
+    "./dist/js/indigo-bootstrap.js"
+  ],
+  "authors": [
+    "Márk Sági-Kazár <mark.sagikazar@gmail.com>"
+  ],
+  "description": "Custom bootstrap elements",
+  "license": "MIT",
+  "homepage": "https://indigophp.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "bootstrap": "3.1.1"
+  }
+}
