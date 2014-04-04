@@ -17,6 +17,8 @@
     "bower_components"
   ],
   "devDependencies": {
-    "bootstrap": "3.1.1"
+    "bootstrap": "3.1.1",
+    "font-awesome": "~4.0",
+    "jasny-bootstrap": "~3.1.1"
   }
 }
