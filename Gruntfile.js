@@ -20,30 +20,6 @@ module.exports = function(grunt) {
       dist: ['dist']
     },
 
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: false
-      },
-      dist: {
-        src: [
-          'js/wizard.js'
-        ],
-        dest: 'dist/js/<%= pkg.name %>.js'
-      }
-    },
-
-    uglify: {
-      options: {
-        banner: '<%= banner %>',
-        report: 'min'
-      },
-      dist: {
-        src: ['<%= concat.dist.dest %>'],
-        dest: 'dist/js/<%= pkg.name %>.min.js'
-      }
-    },
-
     less: {
       dist: {
         options: {
@@ -79,14 +55,7 @@ module.exports = function(grunt) {
 
   require('load-grunt-tasks')(grunt);
 
-  // JS distribution task.
-  grunt.registerTask('js', ['concat', 'uglify']);
-
-  // CSS distribution task.
-  grunt.registerTask('css', ['less']);
-
-  // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'css', 'js']);
+  grunt.registerTask('dist', ['clean', 'less']);
 
   grunt.registerTask('default', ['connect', 'watch']);
 };
